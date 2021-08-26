@@ -9,6 +9,7 @@ Trusted users can post auctions
 - Login
     - log in with facebook
     - captcha?
+    - watch for multiple users from same ip
 - Home
     - Disclaimer
     - Instructions
