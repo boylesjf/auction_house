@@ -1,0 +1,19 @@
+{
+  "name": "auction_house",
+  "version": "1.0.0",
+  "description": "A web app dedicated to hosting and bidding on carnivorous plant auctions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boylesjf/auction_house.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boylesjf/auction_house/issues"
+  },
+  "homepage": "https://github.com/boylesjf/auction_house#readme"
+}
