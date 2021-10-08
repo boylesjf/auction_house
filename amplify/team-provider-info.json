@@ -10,6 +10,11 @@
       "StackName": "amplify-auctionhouse-dev-133754",
       "StackId": "arn:aws:cloudformation:us-east-1:765633065309:stack/amplify-auctionhouse-dev-133754/29843ce0-18a7-11ec-8617-0a610b1e49cf",
       "AmplifyAppId": "d1945079wklxpt"
+    },
+    "categories": {
+      "auth": {
+        "auctionhousee828621e": {}
+      }
     }
   }
 }
