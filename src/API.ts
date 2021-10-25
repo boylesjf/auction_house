@@ -2,22 +2,18 @@
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
-export type CreateProductInput = {
+export type CreateContactInput = {
   id?: string | null,
   name: string,
-  description?: string | null,
-  price?: number | null,
-  image?: string | null,
+  phone: string,
 };
 
-export type ModelProductConditionInput = {
+export type ModelContactConditionInput = {
   name?: ModelStringInput | null,
-  description?: ModelStringInput | null,
-  price?: ModelIntInput | null,
-  image?: ModelStringInput | null,
-  and?: Array< ModelProductConditionInput | null > | null,
-  or?: Array< ModelProductConditionInput | null > | null,
-  not?: ModelProductConditionInput | null,
+  phone?: ModelStringInput | null,
+  and?: Array< ModelContactConditionInput | null > | null,
+  or?: Array< ModelContactConditionInput | null > | null,
+  not?: ModelContactConditionInput | null,
 };
 
 export type ModelStringInput = {
@@ -60,50 +56,22 @@ export type ModelSizeInput = {
   between?: Array< number | null > | null,
 };
 
-export type ModelIntInput = {
-  ne?: number | null,
-  eq?: number | null,
-  le?: number | null,
-  lt?: number | null,
-  ge?: number | null,
-  gt?: number | null,
-  between?: Array< number | null > | null,
-  attributeExists?: boolean | null,
-  attributeType?: ModelAttributeTypes | null,
-};
-
-export type Product = {
-  __typename: "Product",
+export type Contact = {
+  __typename: "Contact",
   id?: string,
   name?: string,
-  description?: string | null,
-  price?: number | null,
-  image?: string | null,
+  phone?: string,
   createdAt?: string,
   updatedAt?: string,
 };
 
-export type UpdateProductInput = {
-  id: string,
-  name?: string | null,
-  description?: string | null,
-  price?: number | null,
-  image?: string | null,
-};
-
-export type DeleteProductInput = {
-  id: string,
-};
-
-export type ModelProductFilterInput = {
+export type ModelContactFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
-  description?: ModelStringInput | null,
-  price?: ModelIntInput | null,
-  image?: ModelStringInput | null,
-  and?: Array< ModelProductFilterInput | null > | null,
-  or?: Array< ModelProductFilterInput | null > | null,
-  not?: ModelProductFilterInput | null,
+  phone?: ModelStringInput | null,
+  and?: Array< ModelContactFilterInput | null > | null,
+  or?: Array< ModelContactFilterInput | null > | null,
+  not?: ModelContactFilterInput | null,
 };
 
 export type ModelIDInput = {
@@ -122,99 +90,57 @@ export type ModelIDInput = {
   size?: ModelSizeInput | null,
 };
 
-export type ModelProductConnection = {
-  __typename: "ModelProductConnection",
-  items?:  Array<Product | null > | null,
+export type ModelContactConnection = {
+  __typename: "ModelContactConnection",
+  items?:  Array<Contact | null > | null,
   nextToken?: string | null,
 };
 
-export type CreateProductMutationVariables = {
-  input?: CreateProductInput,
-  condition?: ModelProductConditionInput | null,
+export type CreateContactMutationVariables = {
+  input?: CreateContactInput,
+  condition?: ModelContactConditionInput | null,
 };
 
-export type CreateProductMutation = {
-  createProduct?:  {
-    __typename: "Product",
+export type CreateContactMutation = {
+  createContact?:  {
+    __typename: "Contact",
     id: string,
     name: string,
-    description?: string | null,
-    price?: number | null,
-    image?: string | null,
+    phone: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type UpdateProductMutationVariables = {
-  input?: UpdateProductInput,
-  condition?: ModelProductConditionInput | null,
-};
-
-export type UpdateProductMutation = {
-  updateProduct?:  {
-    __typename: "Product",
-    id: string,
-    name: string,
-    description?: string | null,
-    price?: number | null,
-    image?: string | null,
-    createdAt: string,
-    updatedAt: string,
-  } | null,
-};
-
-export type DeleteProductMutationVariables = {
-  input?: DeleteProductInput,
-  condition?: ModelProductConditionInput | null,
-};
-
-export type DeleteProductMutation = {
-  deleteProduct?:  {
-    __typename: "Product",
-    id: string,
-    name: string,
-    description?: string | null,
-    price?: number | null,
-    image?: string | null,
-    createdAt: string,
-    updatedAt: string,
-  } | null,
-};
-
-export type GetProductQueryVariables = {
+export type GetContactQueryVariables = {
   id?: string,
 };
 
-export type GetProductQuery = {
-  getProduct?:  {
-    __typename: "Product",
+export type GetContactQuery = {
+  getContact?:  {
+    __typename: "Contact",
     id: string,
     name: string,
-    description?: string | null,
-    price?: number | null,
-    image?: string | null,
+    phone: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type ListProductsQueryVariables = {
-  filter?: ModelProductFilterInput | null,
+export type ListContactsQueryVariables = {
+  filter?: ModelContactFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type ListProductsQuery = {
-  listProducts?:  {
-    __typename: "ModelProductConnection",
+export type ListContactsQuery = {
+  listContacts?:  {
+    __typename: "ModelContactConnection",
     items?:  Array< {
-      __typename: "Product",
+      __typename: "Contact",
       id: string,
       name: string,
-      description?: string | null,
-      price?: number | null,
-      image?: string | null,
+      phone: string,
       createdAt: string,
       updatedAt: string,
     } | null > | null,
@@ -222,40 +148,12 @@ export type ListProductsQuery = {
   } | null,
 };
 
-export type OnCreateProductSubscription = {
-  onCreateProduct?:  {
-    __typename: "Product",
+export type OnCreateContactSubscription = {
+  onCreateContact?:  {
+    __typename: "Contact",
     id: string,
     name: string,
-    description?: string | null,
-    price?: number | null,
-    image?: string | null,
-    createdAt: string,
-    updatedAt: string,
-  } | null,
-};
-
-export type OnUpdateProductSubscription = {
-  onUpdateProduct?:  {
-    __typename: "Product",
-    id: string,
-    name: string,
-    description?: string | null,
-    price?: number | null,
-    image?: string | null,
-    createdAt: string,
-    updatedAt: string,
-  } | null,
-};
-
-export type OnDeleteProductSubscription = {
-  onDeleteProduct?:  {
-    __typename: "Product",
-    id: string,
-    name: string,
-    description?: string | null,
-    price?: number | null,
-    image?: string | null,
+    phone: string,
     createdAt: string,
     updatedAt: string,
   } | null,

@@ -1,12 +1,7 @@
-type Product @model
-  @auth(rules: [
-      { allow: owner },
-      { allow: private, operations: [read] },
-      { allow: public, operations: [read] }
-  ]) {
+type Contact @model(mutations: {
+  create: "createContact"
+}) {
   id: ID!
   name: String!
-  description: String
-  price: Int
-  image: String
+  phone: String!
 }

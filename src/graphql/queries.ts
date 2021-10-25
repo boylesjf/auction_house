@@ -2,32 +2,28 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getProduct = /* GraphQL */ `
-  query GetProduct($id: ID!) {
-    getProduct(id: $id) {
+export const getContact = /* GraphQL */ `
+  query GetContact($id: ID!) {
+    getContact(id: $id) {
       id
       name
-      description
-      price
-      image
+      phone
       createdAt
       updatedAt
     }
   }
 `;
-export const listProducts = /* GraphQL */ `
-  query ListProducts(
-    $filter: ModelProductFilterInput
+export const listContacts = /* GraphQL */ `
+  query ListContacts(
+    $filter: ModelContactFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listProducts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listContacts(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         name
-        description
-        price
-        image
+        phone
         createdAt
         updatedAt
       }
