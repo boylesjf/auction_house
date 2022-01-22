@@ -3,10 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import FacebookLogin from 'react-facebook-login'
+
+const responseFacebook = (response: any) => {
+  console.log(response);
+}
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <FacebookLogin
+      appId="313832323846087"
+      autoLoad={true}
+      fields="name,email,picture"
+      callback={responseFacebook} />
   </React.StrictMode>,
   document.getElementById('root')
 );
